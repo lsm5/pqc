@@ -1,6 +1,9 @@
 FROM fedora:40
 
-COPY script.sh .
-RUN bash script.sh
+COPY install.sh .
+COPY setup.sh .
+
+RUN bash install.sh
+RUN bash setup.sh
 
 CMD ["/bin/bash"]
