@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+dnf -y install vim nginx curl openssl oqsprovider crypto-policies-scripts tcpdump sed
+
 update-crypto-policies --set DEFAULT:TEST-PQ
 
 sed -i '/default = default_sect/a oqsprovider = oqs_sect' /etc/pki/tls/openssl.cnf
