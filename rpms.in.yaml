@@ -1,6 +1,6 @@
 contentOrigin:
   repofiles:
-    - https://src.fedoraproject.org/rpms/fedora-repos/blob/rawhide/f/fedora-rawhide.repo
+    - fedora-rawhide.repo
 packages:
   - liboqs
   - openssl
