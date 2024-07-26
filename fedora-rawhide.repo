@@ -21,22 +21,21 @@
 
 [rawhide]
 name=Fedora - Rawhide - Developmental packages for the next Fedora release
-baseurl=http://download.example/pub/fedora/linux/development/rawhide//Everything/$basearch/os/
-#metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch
-enabled=AUTO_VALUE
+#baseurl=http://download.example/pub/fedora/linux/development/rawhide//Everything/x86_64/os/
+baseurl=https://mirror.csclub.uwaterloo.ca/fedora/linux/development/rawhide/Everything/x86_64/os/
 countme=1
 metadata_expire=6h
 repo_gpgcheck=0
 type=rpm
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-rawhide-$basearch AUTO_VALUE
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-rawhide-x86_64
 skip_if_unavailable=False
 
 [rawhide-debuginfo]
 name=Fedora - Rawhide - Debug
-baseurl=http://download.example/pub/fedora/linux/development/rawhide/Everything/$basearch/debug/tree/
+baseurl=https://mirror.csclub.uwaterloo.ca/fedora/linux/development/rawhide/Everything/$basearch/debug/tree/
 #metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide-debug&arch=$basearch
-enabled=0
+enabled=1
 metadata_expire=6h
 repo_gpgcheck=0
 type=rpm
@@ -46,12 +45,10 @@ skip_if_unavailable=False
 
 [rawhide-source]
 name=Fedora - Rawhide - Source
-baseurl=http://download.example/pub/fedora/linux/development/rawhide/Everything/source/tree/
+baseurl=https://mirror.csclub.uwaterloo.ca/fedora/linux/development/rawhide/Everything/source/tree/
 #metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide-source&arch=$basearch
-enabled=0
+enabled=1
 metadata_expire=6h
 repo_gpgcheck=0
 type=rpm
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-rawhide-$basearch AUTO_VALUE
-skip_if_unavailable=False
