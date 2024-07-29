@@ -1,4 +1,4 @@
-FROM fedora:40
+FROM fedora:rawhide
 
 COPY setup.sh .
 RUN bash setup.sh
