@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -exo pipefail
+
 dnf -y install vim nginx curl openssl oqsprovider crypto-policies-scripts tcpdump sed
 
 update-crypto-policies --set DEFAULT:TEST-PQ
