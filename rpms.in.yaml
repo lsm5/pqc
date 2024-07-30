@@ -1,12 +1,19 @@
 contentOrigin:
   repos:
     - repoid: fedora
-      baseurl: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/$basearch/os/
+      baseurl: https://kojipkgs.fedoraproject.org/compose/40/latest-Fedora-40/compose/Everything/$basearch/os/
     - repoid: fedora-debug
-      baseurl: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/$basearch/debug/tree
+      baseurl: https://kojipkgs.fedoraproject.org/compose/40/latest-Fedora-40/compose/Everything/$basearch/debug/tree/
     - repoid: fedora-source
-      baseurl: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree
+      baseurl: https://kojipkgs.fedoraproject.org/compose/40/latest-Fedora-40/compose/Everything/source/tree/
+    - repoid: fedora-updates
+      baseurl: https://kojipkgs.fedoraproject.org/compose/updates/f40-updates/compose/Everything/$basearch/os/
+    - repoid: fedora-updates-debug
+      baseurl: https://kojipkgs.fedoraproject.org/compose/updates/f40-updates/compose/Everything/$basearch/debug/tree/
+    - repoid: fedora-updates-source
+      baseurl: https://kojipkgs.fedoraproject.org/compose/updates/f40-updates/compose/Everything/source/tree/
 packages:
+  - crypto-policies
   - liboqs
   - openssl
   - oqsprovider
