@@ -1,6 +1,8 @@
-FROM fedora:40
+FROM fedora:rawhide
 
-COPY script.sh .
-RUN bash script.sh
+COPY setup.sh .
+RUN bash setup.sh
+
+COPY tests.sh .
 
 CMD ["/bin/bash"]
