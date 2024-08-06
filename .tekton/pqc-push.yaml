@@ -14,7 +14,7 @@ metadata:
     appstudio.openshift.io/component: pqc
     pipelines.appstudio.openshift.io/type: build
   name: pqc-on-push
-  namespace: lmandvek-tenant
+  namespace: lsm5-tenant
 spec:
   params:
   - name: git-url
@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/lmandvek-tenant/pqc-test/pqc:{{revision}}
+    value: quay.io/konflux-fedora/lsm5-tenant/pqc-test/pqc:{{revision}}
   - name: dockerfile
     value: Containerfile
   pipelineSpec:
@@ -55,7 +55,7 @@ spec:
         - name: name
           value: summary
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-summary:0.2@sha256:d97c04ab42f277b1103eb6f3a053b247849f4f5b3237ea302a8ecada3b24e15b
+          value: quay.io/konflux-ci/tekton-catalog/task-summary:0.2@sha256:4b0563bcb5a070b9f7a783bfb831941d4fe5fa42bbb732a63c63f8f7936d4467
         - name: kind
           value: task
         resolver: bundles
@@ -205,8 +205,6 @@ spec:
         workspace: workspace
       - name: git-basic-auth
         workspace: git-auth
-      - name: netrc
-        workspace: netrc
     - name: build-container
       params:
       - name: IMAGE
@@ -339,13 +337,8 @@ spec:
         values:
         - "false"
     - name: sast-snyk-check
-      params:
-      - name: image-digest
-        value: $(tasks.build-container.results.IMAGE_DIGEST)
-      - name: image-url
-        value: $(tasks.build-container.results.IMAGE_URL)
       runAfter:
-      - build-container
+      - clone-repository
       taskRef:
         params:
         - name: name
@@ -449,8 +442,6 @@ spec:
     workspaces:
     - name: workspace
     - name: git-auth
-      optional: true
-    - name: netrc
       optional: true
   taskRunTemplate: {}
   workspaces:
