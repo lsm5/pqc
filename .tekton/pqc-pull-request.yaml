@@ -211,6 +211,7 @@ spec:
       - name: git-basic-auth
         workspace: git-auth
     - name: build-container
+      timeout: 6h
       params:
       - name: IMAGE
         value: $(params.output-image)
