@@ -44,3 +44,4 @@ arches:
     checksum: sha256:685bd4ebe7caeaee8f2ceff2488e43cfeafdbef856e6b2b876dd132b0b330074
     name: oqsprovider
     evr: 0.6.0-3.fc41
+  module_metadata: []
