@@ -18,13 +18,6 @@ arches:
     name: openssl
     evr: 1:3.2.2-8.fc42
     sourcerpm: openssl-3.2.2-8.fc42.src.rpm
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/openssl-libs-3.2.2-8.fc42.x86_64.rpm
-    repoid: fedora
-    size: 2422525
-    checksum: sha256:38dc19218240654114e43551ac34d3f7555495601f54414e86e775c63d9dccde
-    name: openssl-libs
-    evr: 1:3.2.2-8.fc42
-    sourcerpm: openssl-3.2.2-8.fc42.src.rpm
   - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/oqsprovider-0.6.0-3.fc41.x86_64.rpm
     repoid: fedora
     size: 183176
